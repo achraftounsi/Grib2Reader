@@ -1,8 +1,11 @@
+import os
+import sys
 from functools import partial
 
 import numpy as np
 
-from src import aggregate_fields, _check_coords_range, _get_grib_projection, _get_threshold_value
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+from Grib2Reader.src import aggregate_fields, _check_coords_range, _get_grib_projection, _get_threshold_value
 
 # Pyproj engine
 try:
